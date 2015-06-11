@@ -1,0 +1,46 @@
+div{
+
+position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 500px;
+    height: 300px;
+    margin-left: -250px;
+    margin-top: -150px;  
+}
+
+h1{
+	color: white;
+	font-family: "Times New Roman";
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+fieldset {
+    background-color: white;
+    font-style: normal;
+    border-radius: 20px;
+    padding:5px;
+}
+form
+{
+    text-align: center;
+}
+input{
+  border: 3px solid black;
+	width: 300px;
+}
+input.error, textarea.error{
+  border: 3px solid red;
+   
+}
+
+
+
+
+body {	
+	background-color: navy;
+	}
+

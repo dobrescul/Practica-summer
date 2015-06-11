@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+<div> 
+	<h1>Login information</h1>
+<form >
+<fieldset>
+
+E-mail:<br>
+<input id="email" placeholder="me@example.com" type="text" name="email" value="">
+<br>
+Username:<br>
+<input id="username" type="text" name="username" value="" maxlength="30">
+<br>
+Password:<br>
+<input id="password" type="password" name="password" value="" maxlength="30">
+<br>
+Confirm password:<br>
+<input id="confirm" type="password" name="confirm" value="" maxlength="30" onkeyup="checkPass(); return false;">
+
+<br>
+Age:<br>
+<input id="age" type="text" name="age" value="" onkeyup="validAge();">
+<br>
+
+<br>
+<button id="btn1">Submit</button>
+</fieldset>
+</form>
+</div>
+<script>
+function checkPass()
+{
+    
+    var pass1 = document.getElementById('password');
+    var pass2 = document.getElementById('confirm'); 
+    var okColor = "#66cc66";
+    var notOkColor = "#ff6666";
+   
+    if(pass1.value == pass2.value){       
+        pass2.style.backgroundColor = okColor;
+       
+    }else{     
+        pass2.style.backgroundColor = notOkColor;
+       
+    }
+}
+ function validAge(){
+      var age=document.getElementById('age').value;     
+	  if (isNaN(age) || age < 1 || age > 100)
+		{ 
+ 				 alert("age must be  between 1 and 100");
+  			return false;
+			}
+    }
+</script>
+
+<script src="myscript.js"></script>
+</body>
+</html>
